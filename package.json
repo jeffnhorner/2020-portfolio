@@ -1,0 +1,21 @@
+{
+  "name": "2020-portfolio",
+  "private": true,
+  "scripts": {
+    "build": "gridsome build",
+    "develop": "gridsome develop",
+    "explore": "gridsome explore"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.32",
+    "@fortawesome/free-brands-svg-icons": "^5.15.1",
+    "@fortawesome/free-solid-svg-icons": "^5.15.1",
+    "@fortawesome/vue-fontawesome": "^2.0.0",
+    "gridsome": "^0.7.0",
+    "vuetify": "^2.3.17"
+  },
+  "devDependencies": {
+    "css-loader": "^5.0.1",
+    "vue-style-loader": "^4.1.2"
+  }
+}
