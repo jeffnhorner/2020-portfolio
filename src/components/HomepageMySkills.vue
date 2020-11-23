@@ -3,11 +3,10 @@
         <div v-bind:class="$style.mySkillsText">
             <h2>My Skills</h2>
             <p>
-                From the beginning days of when I first got into software development all the
-                way to now, I’ve learned and gained a solid understand of web development
-                standards: the importance of code standards, why reusability/scalability in
-                large enterprise applications is so important, and how user expereince means
-                everything.
+                From the beginning days of when I first got into software development up
+                until now, I’ve learned and gained a solid understanding of web development
+                standards, the importance of code standards, the importance of reusability/scalability
+                in large enterprise applications, and how user expereince means everything.
             </p>
         </div>
         <div v-bind:class="$style.mySkillsItems">

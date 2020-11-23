@@ -1,14 +1,14 @@
 <template>
     <header v-bind:class="$style.header">
-        <g-link
-            v-bind:class="$style.logo"
-            to="/"
+        <Logo />
+        <div
+            v-if="isHomepage"
+            v-bind:class="$style.bottomHeaderWrapper"
         >
-            jeff<span v-bind:class="$style.primaryGreen">n</span>horner
-        </g-link>
-        <div v-bind:class="$style.bottomHeaderWrapper">
-            <SocialMediaIcons v-bind:class="$style.socialMediaIcons" />
-            <hr v-bind:class="$style.designLine" />
+            <SocialMediaIcons />
+            <hr
+                v-bind:class="$style.designLine"
+            />
         </div>
     </header>
 </template>
@@ -16,25 +16,21 @@
 <script>
     export default {
         components: {
+            Logo: () => import('~/components/Logo'),
             SocialMediaIcons: () => import('~/components/SocialMediaIcons'),
         },
+
+        computed: {
+            isHomepage () {
+                return this.$route.path === '/';
+            }
+        }
     }
 </script>
 
 <style module>
     .header {
         margin-top: 8rem;
-    }
-
-    .primaryGreen {
-        color: #99D5B6;
-    }
-
-    .logo {
-        color: #262626;
-        font-weight: 700;
-        letter-spacing: .025rem;
-        text-decoration: none;
     }
 
     .bottomHeaderWrapper {
@@ -45,8 +41,8 @@
     }
 
     .designLine {
-        height: 2px;
-        background: #808080;
+        height: .05rem;
+        background: #d4d4d4;
         border: none;
         max-width: 20rem;
         margin-right: 0;

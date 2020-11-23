@@ -14,6 +14,7 @@
     import {
         faBars,
         faTimes,
+        faLongArrowAltRight,
     } from '@fortawesome/free-solid-svg-icons';
     import {
         faInstagram,
@@ -25,6 +26,7 @@
     library.add(
         faBars,
         faTimes,
+        faLongArrowAltRight,
         faInstagram,
         faGithub,
         faYoutube,
