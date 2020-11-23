@@ -1,7 +1,13 @@
 <template>
-    <div v-bind:class="$style.homepageContainer">
-        <Navigation />
-        <slot/>
+    <div>
+        <transition name="fade" appear>
+            <!-- wrapper element required for <transition> element to work properly -->
+            <main class="layoutContainer">
+                <Navigation />
+                <slot/>
+            </main>
+        </transition>
+        <Footer />
     </div>
 </template>
 
@@ -17,11 +23,12 @@
     export default {
         components: {
             Navigation: () => import('~/components/Navigation'),
+            Footer: () => import('~/components/Footer'),
         },
     }
 </script>
 
-<style module>
+<style>
     body {
         background: #fff;
         background-color: #fff;
@@ -32,9 +39,21 @@
         line-height: 1.5;
     }
 
-    .homepageContainer {
+    .layoutContainer {
         max-width: 90rem;
         margin: 0 auto;
         padding: 0 4rem;
+    }
+
+    .fade-enter-active,
+    .fade-leave-active {
+        transition-duration: 1s;
+        transition-property: opacity;
+        transition-timing-function: ease;
+    }
+
+    .fade-enter,
+    .fade-leave-active {
+        opacity: 0
     }
 </style>

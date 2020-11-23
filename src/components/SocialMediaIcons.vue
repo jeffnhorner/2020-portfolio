@@ -54,7 +54,7 @@
                 },
             ];
 
-            this.defaultIconColor = '#808080';
+            this.defaultIconColor = '#d4d4d4';
         }
     }
 </script>
@@ -68,9 +68,10 @@
 
     .socialMediaIconLink {
         margin-right: 1.75rem;
+        position: relative;
     }
 
     .socialMediaIcon {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 </style>

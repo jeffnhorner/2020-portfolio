@@ -2,21 +2,40 @@
     <div v-bind:class="$style.container">
         <g-image
             src="~/../static/homepage-masthead.jpg"
-            v-bind:class="$style.homepageMastheadImage"
+            v-bind:class="[
+                $style.homepageMastheadImage,
+                {
+                    [$style.homepageMastheadImageAnimate] : isAnimating,
+                },
+            ]"
         />
         <div v-bind:class="$style.mastheadText">
-            <h1 v-bind:class="$style.mastheadTextWrapper">
+            <h1 v-bind:class="[
+                $style.mastheadTextWrapper,
+                {
+                    [$style.mastheadTextWrapperAnimate] : isAnimating,
+                },
+            ]">
                 <span>Yo, I'm Jeff.</span>
-                <span v-bind:class="[$style.highlightText, $style.primaryGreen]">Software Engineer</span>
-                <span v-bind:class="$style.coffeeText">and coffee snob.</span>
+                <span v-bind:class="[$style.highlightText, $style.primaryBlack]">Software Engineer</span>
+                <span v-bind:class="$style.coffeeText">and coffee lover.</span>
             </h1>
-            <p v-bind:class="$style.introText">
-                <span v-bind:class="[$style.primaryGreen, $style.shortDescription]">TL;DR</span>
+            <p v-bind:class="[
+                $style.introText,
+                {
+                    [$style.introTextAnimate] : isAnimating,
+                },
+            ]">
+                <span v-bind:class="[$style.primaryBlack, $style.shortDescription]">TL;DR</span>
                 &nbsp;I love Jesus, my wife, coding, coffee, fitness, and all things Harry Potter.
             </p>
-            <p v-bind:class="$style.introText">
-                I’m a self-taugh software engineer and made the transition from Finance to Tech roughly
-                3.5 years ago. I’ve had the pleasure of working alongside some incredible engineers,
+            <p v-bind:class="[
+                $style.introText,
+                {
+                    [$style.introTextAnimate] : isAnimating,
+                },
+            ]">
+                I’m a self-taugh Software Engineer and made the transition from my previous career to Tech in 2017. I’ve had the pleasure of working alongside some incredible engineers,
                 designers, business analysts, and product owners. I’m extremly passionate about  code
                 standards, ECMAScript, and reactive Javascript frameworks (Vue.js is my jam).
             </p>
@@ -26,7 +45,13 @@
 
 <script>
     export default {
+        data: () => ({
+            isAnimating: false,
+        }),
 
+        mounted () {
+            setTimeout(() => this.isAnimating = true, 200);
+        }
     }
 </script>
 
@@ -39,13 +64,16 @@
 
     .homepageMastheadImage {
         align-self: flex-end;
+        border-radius: 5px;
         display: block;
         max-width: 45%;
+        transition: transform .65s ease;
+        transform: translateY(2.5rem);
         width: 100%;
     }
 
-    .primaryGreen {
-        color: #99D5B6;
+    .primaryBlack {
+        color: #262626;
     }
 
     .highlightText {
@@ -53,7 +81,7 @@
     }
 
     .shortDescription {
-        font-weight: 400;
+        font-weight: 600;
     }
 
     .mastheadText {
@@ -67,11 +95,46 @@
     }
 
     .mastheadTextWrapper {
-        font-weight: 600;
+        font-weight: 300;
         font-size: 4vw;
         line-height: 120%;
         margin-bottom: 2.5rem;
         text-align: right;
+    }
+
+    .mastheadTextWrapper span:nth-of-type(1) {
+        transition: transform .5s ease;
+        transform: translateY(2rem);
+    }
+
+    .mastheadTextWrapper span:nth-of-type(2) {
+        transition: transform .65s ease;
+        transform: translateY(1.6rem);
+    }
+
+    .mastheadTextWrapper span:nth-of-type(3) {
+        transition: transform .8s ease;
+        transform: translateY(1.5rem);
+    }
+
+    .introText {
+        line-height: 2.25rem;
+        font-weight: 300;
+        margin-bottom: 0;
+        transition: transform .9s ease;
+        transform: translateY(1.5rem);
+    }
+
+    .introText:first-of-type {
+        margin-bottom: 1rem;
+    }
+
+    .homepageMastheadImageAnimate,
+    .introTextAnimate,
+    .mastheadTextWrapperAnimate span:nth-of-type(1),
+    .mastheadTextWrapperAnimate span:nth-of-type(2),
+    .mastheadTextWrapperAnimate span:nth-of-type(3) {
+        transform: translateY(0);
     }
 
     .mastheadTextWrapper > span {
@@ -80,16 +143,6 @@
 
     h1 {
         margin: 0;
-    }
-
-    .introText {
-        line-height: 2.25rem;
-        font-weight: 300;
-        margin-bottom: 0;
-    }
-
-    .introText:first-of-type {
-        margin-bottom: 1rem;
     }
 
     @media only screen and (min-width: 640px) {

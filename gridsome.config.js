@@ -25,5 +25,10 @@ module.exports = {
                 ],
             }
         ]
-    }
+    },
+    chainWebpack: config => {
+        // This is required to fix a bug asssociated with dynamic g-image src prop binding.
+        // see https://github.com/gridsome/gridsome/issues/292#issuecomment-583692119
+        config.resolve.alias.set('@images', '~/../static/')
+    },
 }

@@ -5,10 +5,10 @@
             <p>
                 I stay pretty active when it comes to extra-curricular projects. Whether that
                 means contributing to an open source project, working on my own passion
-                project, or building a website/web app for a client who has hired me.
+                project, or building a website/web app for a freelance client.
             </p>
         </div>
-        <RecentWork />
+        <RecentWork v-bind:class="$style.recentWork" />
     </div>
 </template>
 
@@ -22,9 +22,8 @@
 
 <style module>
     .container {
-        align-items: flex-end;
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
         margin-top: 12rem;
     }
 
@@ -45,7 +44,7 @@
         margin-bottom: 0;
     }
 
-    .skill {
-        margin: .375rem;
+    .recentWork {
+        margin-top: 5rem;
     }
 </style>
