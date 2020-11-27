@@ -120,8 +120,9 @@
     }
 
     .icon {
+        font-size: 1.15rem;
         margin-left: .5rem;
-        transition: transform .2s ease;
+        transition: transform .3s ease;
         transform: translateX(0);
     }
 
