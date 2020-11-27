@@ -67,7 +67,7 @@
         border-radius: 5px;
         display: block;
         max-width: 45%;
-        transition: transform .65s ease;
+        transition: transform .6s ease;
         transform: translateY(2.5rem);
         width: 100%;
     }
@@ -121,7 +121,7 @@
         line-height: 2.25rem;
         font-weight: 300;
         margin-bottom: 0;
-        transition: transform .9s ease;
+        transition: transform .85s ease;
         transform: translateY(1.5rem);
     }
 

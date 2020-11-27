@@ -38,6 +38,11 @@
                     url: 'https://instagram.com/jeffnhorner',
                 },
                 {
+                    color: '#0077b5',
+                    fontawesomeName: ['fab', 'linkedin'],
+                    url: 'https://www.linkedin.com/in/jeff-horner/',
+                },
+                {
                     color: '#FF0000',
                     fontawesomeName: ['fab', 'youtube'],
                     url: 'https://www.youtube.com/channel/UCQA2BYYROrN1WvvUqaB13zA/',

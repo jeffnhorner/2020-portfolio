@@ -9,17 +9,33 @@ export default [
             'takeSplit.png',
         ],
         longDescription: 'From the beginning days of when I first got into software development all the way to now, I’ve learned and gained a solid understand of web development standards: the importance of code standards, why reusability/scalability in large enterprise applications is so important, and how user expereince means everything.',
-        type: 'Freelance Project',
-        Stack: [
-            'Firebase',
-            'Netlify',
-            'Vue (Gridsome framework)',
-            'Vuelidate',
-            'Vuex',
-            'Vuetify',
+        highlights: [
+            {
+                title: 'Type',
+                content: 'Freelance Project',
+            },
+            {
+                title: 'Stack',
+                content: [
+                    'Firebase',
+                    'Netlify',
+                    'Vue (Gridsome framework)',
+                    'Vuelidate',
+                    'Vuex',
+                    'Vuetify',
+                ],
+            },
+            {
+                title: 'Show Me The Code',
+                isLink: true,
+                content: 'https://github.com/jeffnhorner/split-test-project',
+            },
+            {
+                title: 'View It',
+                isLink: true,
+                content: 'https://takesplit-become-a-driver.netlify.app/',
+            }
         ],
-        'repositoryLink': 'https://github.com/jeffnhorner/split-test-project',
-        'liveLink': 'https://takesplit-become-a-driver.netlify.app/',
         'theNeed': 'I stay pretty active when it comes to extra-curricular projects. Whether that means contributing to an open source project, working on my own passion project, or building a website/web app for a client who has hired me.',
         'theStack': 'I stay pretty active when it comes to extra-curricular projects. Whether that means contributing to an open source project, working on my own passion project, or building a website/web app for a client who has hired me.',
         problemsAndLessons: 'I stay pretty active when it comes to extra-curricular projects. Whether that means contributing to an open source project, working on my own passion project, or building a website/web app for a client who has hired me.',

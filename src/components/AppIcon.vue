@@ -21,6 +21,7 @@
         faGithub,
         faYoutube,
         faTwitter,
+        faLinkedin,
     } from '@fortawesome/free-brands-svg-icons';
 
     library.add(
@@ -28,6 +29,7 @@
         faTimes,
         faLongArrowAltRight,
         faInstagram,
+        faLinkedin,
         faGithub,
         faYoutube,
         faTwitter,

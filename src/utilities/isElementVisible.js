@@ -10,8 +10,6 @@
  */
 export const isElementVisible = (element, topOffset = 0, bottomOffset = 0) => {
     const rect = element?.getBoundingClientRect();
-    // adding 150 allows the element container to paritally be in view before the
-    // animation begins.
     const topOfElement = rect.top + topOffset;
     const bottomOfElement = rect.bottom + bottomOffset;
 
