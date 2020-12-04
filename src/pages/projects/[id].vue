@@ -5,7 +5,6 @@
             <p v-bind:class="$style.description">{{ pageData.longDescription }}</p>
             <ProjectHighlights
                 v-bind:project-highlights="pageData"
-                v-bind:class="$style.highlights"
             />
             <ProjectDetails
                 v-bind:project-details="pageData"
@@ -68,10 +67,6 @@
         margin: 0;
         max-width: 75%;
         width: 100%;
-    }
-
-    .highlights {
-        margin-bottom: 4rem;
     }
 
     .lessons {
