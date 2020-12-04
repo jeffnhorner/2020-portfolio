@@ -2,6 +2,7 @@
     <div v-bind:class="$style.container">
         <h2 v-bind:class="$style.title">The Need</h2>
         <p v-bind:class="$style.description">{{ projectDetails.theNeed }}</p>
+        <h2 v-bind:class="[$style.title, $style.techTitle]">Choosing the Tech Stack</h2>
         <div v-bind:class="$style.techStackWrapper">
             <div v-bind:class="$style.techStackChips">
                 <template
@@ -18,7 +19,6 @@
                 </template>
             </div>
             <div v-bind:class="$style.techStackTextContainer">
-                <h2 v-bind:class="$style.title">Choosing the Tech Stack</h2>
                 <p v-bind:class="$style.description">{{ projectDetails.theStack }}</p>
             </div>
         </div>
@@ -44,7 +44,7 @@
 
         computed: {
             techStackItems () {
-                return this.projectDetails.highlights.find(({ title }) => title === 'Stack')?.content;
+                return this.projectDetails.highlights.find(({ title }) => title.includes('Tech'))?.content;
             },
         }
     }
@@ -60,6 +60,10 @@
         margin: 5rem 0 2rem;
     }
 
+    .techTitle {
+        text-align: right;
+    }
+
     .description {
         line-height: 2.25rem;
         font-weight: 300;
@@ -69,25 +73,24 @@
     }
 
     .techStackWrapper {
-        align-items: flex-end;
+        align-items: flex-start;
         display: flex;
         justify-content: space-between;
-        margin-top: 3rem;
     }
 
     .techStackChips {
+        max-width: 40%;
         width: 100%;
-        margin-bottom: 1rem;
-        max-width: 45%;
     }
 
     .techStackTextContainer {
         text-align: right;
+        width: 100%;
     }
 
     .techStackTextContainer .description {
         float: right;
-        max-width: 90%;
+        max-width: 100%;
     }
 
     .skill {

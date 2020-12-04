@@ -14,6 +14,7 @@
                 <ProjectCard
                     v-bind:key="project.title"
                     v-bind:project="project"
+                    v-bind:image="project.homepageImage"
                 />
             </template>
         </div>

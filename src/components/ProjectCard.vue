@@ -55,6 +55,10 @@
                 type: Object,
                 required: true,
             },
+            image: {
+                type: String,
+                default: '',
+            },
         },
 
         data: () => ({
@@ -66,7 +70,7 @@
             imageSource () {
                 // This is required to fix a bug asssociated with dynamic g-image src prop binding.
                 // see https://github.com/gridsome/gridsome/issues/292#issuecomment-583692119
-                return require(`!!assets-loader!@images/${this.project.image}`);
+                return require(`!!assets-loader!@images/${this.image || this.project.image}`);
             },
         },
 

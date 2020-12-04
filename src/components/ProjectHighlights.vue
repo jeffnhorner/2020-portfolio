@@ -30,6 +30,12 @@
                 <span v-else>Link</span>
             </g-link>
             <p
+                v-else-if="highlight.isPrivate"
+                v-bind:class="$style.highlightContent"
+            >
+                Available upon request (private repo).
+            </p>
+            <p
                 v-else
                 v-bind:class="$style.highlightContent"
             >
@@ -110,7 +116,9 @@
     .image {
         border-radius: 5px;
         box-shadow: 0px 0px 10px #bbb;
+        height: 100%;
         max-width: 70%;
+        max-height: 37rem;
         width: 100%;
     }
 </style>

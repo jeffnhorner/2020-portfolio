@@ -56,6 +56,9 @@
                 'UI Design',
                 'User Experience',
                 'Webpack',
+                'Google Analytics',
+                'Enhanced Ecommerce GA',
+                'Google Tag Manager',
             ];
         }
     }
