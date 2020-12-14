@@ -4,7 +4,6 @@
             $style.container,
             {
                 [$style.containerAnimation] : componentIsVisible,
-                [$style.marginBottom] : project.title.includes('CPAP'),
                 [$style.shadowAnimation] : isHovering,
             },
         ]"
@@ -136,9 +135,5 @@
 
     .paddingTop {
         padding-top: 1rem;
-    }
-
-    .marginBottom {
-        margin-bottom: 8rem;
     }
 </style>
