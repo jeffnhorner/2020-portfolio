@@ -47,6 +47,16 @@
                 return require(`!!assets-loader!@images/${this.pageData.image}`);
             },
         },
+
+        metaInfo () {
+            return this.isReady
+                ? {
+                    title: `Jeff Horner | ${(this.pageData || {}).title || 'Project Page'}`,
+                    // Removes the '- Gridsome' from the page title
+                    titleTemplate: '%s'
+                }
+                : {};
+        },
     }
 </script>
 

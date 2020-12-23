@@ -66,7 +66,13 @@
                 Object.entries(this.$refs)
                     .forEach(component => this[`${component[0]}IsVisible`] = isElementVisible(component[1].$el, 150));
             }
-        }
+        },
+
+        metaInfo: {
+            title: `Jeff Horner | Developer, Designer, & Creator`,
+            // Removes the '- Gridsome' from the page title
+            titleTemplate: '%s'
+        },
     }
 </script>
 
