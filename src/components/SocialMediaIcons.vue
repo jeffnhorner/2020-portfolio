@@ -72,11 +72,17 @@
     }
 
     .socialMediaIconLink {
-        margin-right: 1.75rem;
+        margin-right: 1.25rem;
         position: relative;
     }
 
     .socialMediaIcon {
         font-size: 1.5rem;
+    }
+
+    @media only screen and (min-width: 768px) {
+        .socialMediaIconLink {
+            margin-right: 1.75rem;
+        }
     }
 </style>
