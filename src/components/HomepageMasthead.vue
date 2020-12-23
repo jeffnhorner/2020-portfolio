@@ -60,7 +60,7 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        margin-top: 6rem;
+        margin-top: 2.5rem;
     }
 
     .homepageMastheadImage {
@@ -145,6 +145,7 @@
     @media only screen and (min-width: 768px) {
         .container {
             flex-direction: row;
+            margin-top: 6rem;
         }
 
         .homepageMastheadImage {

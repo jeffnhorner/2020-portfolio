@@ -151,8 +151,4 @@
             margin-left: 1rem;
         }
     }
-
-    @media only screen and (min-width: 1200px) {
-
-    }
 </style>
