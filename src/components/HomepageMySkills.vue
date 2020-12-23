@@ -5,7 +5,7 @@
             <p>
                 From the beginning days of when I first got into software development up
                 until now, I’ve learned and gained a solid understanding of web development
-                standards, the importance of code standards, the importance of reusability/scalability
+                standards, the importance of reusability/scalability
                 in large enterprise applications, and how user expereince means everything.
             </p>
         </div>
