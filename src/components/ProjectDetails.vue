@@ -81,37 +81,33 @@
         display: flex;
         flex-direction: column;
     }
-    .title {
-        font-size: 2.25rem;
-        margin: 5rem 0 2rem;
-    }
 
-    .techTitle {
-        text-align: right;
+    .title {
+        font-size: 1.5rem;
+        margin: 5rem 0 2rem;
     }
 
     .description {
         line-height: 2.25rem;
         font-weight: 300;
         margin: 0;
-        max-width: 75%;
         width: 100%;
     }
 
     .techStackWrapper {
         align-items: flex-start;
         display: flex;
-        justify-content: space-between;
+        flex-direction: column-reverse;
     }
 
     .techStackChips {
-        max-width: 40%;
+        margin-top: 3rem;
+        margin-left: -.375rem;
         width: 100%;
     }
 
     .techStackTextContainer,
     .notableWorkContainer {
-        text-align: right;
         width: 100%;
     }
 
@@ -127,14 +123,15 @@
 
     .imageContainer {
         display: flex;
+        flex-direction: column;
         justify-content: space-between;
-        margin-top: 8rem;
+        margin-top: 4rem;
     }
 
     .image {
         box-shadow: 0px 0px 10px #bbb;
         border-radius: 5px;
-        max-width: 48.5%;
+        margin: 1rem 0;
         width: 100%;
     }
 
@@ -142,5 +139,45 @@
     a:visited {
         color: #262626;
         font-weight: 900;
+    }
+
+    @media only screen and (min-width: 1200px) {
+        .title {
+            font-size: 2.25rem;
+        }
+
+        .description {
+            max-width: 75%;
+        }
+
+        .techTitle {
+            text-align: right;
+        }
+
+        .techStackChips {
+            max-width: 40%;
+            margin-top: 0;
+            margin-left: 0;
+        }
+
+        .techStackTextContainer,
+        .notableWorkContainer {
+            text-align: right;
+        }
+
+        .techStackWrapper {
+            align-items: flex-start;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .imageContainer {
+            flex-direction: row;
+            margin: 8rem 0 0;
+        }
+
+        .image {
+            max-width: 48.5%;
+        }
     }
 </style>

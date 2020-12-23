@@ -58,6 +58,7 @@
 <style module>
     .container {
         display: flex;
+        flex-direction: column;
         justify-content: space-between;
         margin-top: 6rem;
     }
@@ -66,7 +67,6 @@
         align-self: flex-end;
         border-radius: 5px;
         display: block;
-        max-width: 45%;
         transition: transform .6s ease;
         transform: translateY(2.5rem);
         width: 100%;
@@ -87,19 +87,16 @@
     .mastheadText {
         display: flex;
         flex-direction: column;
-        margin-left: 5rem;
         justify-content: flex-end;
-        text-align: right;
+        margin-top: 3rem;
         width: 100%;
-        max-width: 50%;
     }
 
     .mastheadTextWrapper {
         font-weight: 300;
-        font-size: 4vw;
-        line-height: 120%;
-        margin-bottom: 2.5rem;
-        text-align: right;
+        font-size: 2.25rem;
+        line-height: 130%;
+        margin: 2.5rem 0;
     }
 
     .mastheadTextWrapper span:nth-of-type(1) {
@@ -145,22 +142,38 @@
         margin: 0;
     }
 
-    @media only screen and (min-width: 640px) {
-
-    }
-
     @media only screen and (min-width: 768px) {
+        .container {
+            flex-direction: row;
+        }
 
-    }
+        .homepageMastheadImage {
+            max-width: 45%;
+        }
 
-    @media only screen and (min-width: 1024px) {
+        .mastheadText {
+            max-width: 50%;
+            margin-left: 3rem;
+            text-align: right;
+        }
 
+        .mastheadTextWrapper {
+            line-height: 120%;
+            font-size: 3.5vw;
+            margin-top: 0;
+        }
     }
 
     @media only screen and (min-width: 1200px) {
         .mastheadTextWrapper > .highlightText,
         .mastheadTextWrapper > .coffeeText {
             margin: 0;
+        }
+
+        .mastheadText {
+            max-width: 50%;
+            margin-left: 5rem;
+            text-align: right;
         }
     }
 

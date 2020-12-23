@@ -68,14 +68,19 @@
     .container {
         align-items: flex-end;
         display: flex;
+        flex-direction: column;
         justify-content: space-between;
-        margin-top: 12rem;
+        margin-top: 8rem;
     }
 
     .mySkillsText,
     .mySkillsItems {
         width: 100%;
-        max-width: 45%;
+    }
+
+    .mySkillsItems {
+        margin-top: 3rem;
+        margin-right: .375rem;
     }
 
     .mySkillsText > h2 {
@@ -90,11 +95,25 @@
         margin-bottom: 0;
     }
 
-    .mySkillsItems {
-        text-align: right;
-    }
-
     .skill {
         margin: .375rem;
+    }
+
+    @media only screen and (min-width: 768px) {
+        .container {
+            flex-direction: row;
+            margin-top: 12rem;
+        }
+
+        .mySkillsText,
+        .mySkillsItems {
+            width: 100%;
+            max-width: 45%;
+        }
+
+        .mySkillsItems {
+            text-align: right;
+            margin-left: 0;
+        }
     }
 </style>

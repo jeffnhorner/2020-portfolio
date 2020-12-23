@@ -11,7 +11,7 @@
                 project, or building a website/web app for a freelance client.
             </p>
         </div>
-        <h3 v-bind:class="$style.header">Most Recent Client Work</h3>
+        <h3 v-bind:class="[$style.header, $style.recentWork]">Most Recent Client Work</h3>
         <div v-bind:class="$style.topRowProjectCards">
             <template v-for="project in determineProjectCardsToDisplay(0, 2)">
                 <ProjectCard
@@ -26,12 +26,14 @@
                 <ProjectCard
                     v-bind:key="project.title"
                     v-bind:project="project"
-                    v-bind:image="project.homepageImage"
+                    v-bind:image="isTabletOrMobile ? project.bannerImage : project.homepageImage"
                 />
             </template>
         </div>
         <h3 v-bind:class="$style.header">Coming Soon</h3>
-        <p>Github highlights and my Shopify App!</p>
+        <div v-bind:class="$style.githubProjectCards">
+            <p>Github highlights and my Shopify App.</p>
+        </div>
     </div>
 </template>
 
@@ -50,6 +52,9 @@
 
             this.projects = projects;
             this.isReady = true;
+
+            // Non-reactive property to determine on page load if we're on a tablet or mobile.
+            this.isTabletOrMobile = window.innerWidth <= 768;
         },
 
         methods: {
@@ -72,12 +77,12 @@
     .container {
         display: flex;
         flex-direction: column;
-        margin-top: 12rem;
+        margin-top: 8rem;
     }
 
-    .myWorkText {
+    .myWorkText,
+    .githubProjectCards > p {
         width: 100%;
-        max-width: 45%;
     }
 
     .myWorkText > h2 {
@@ -86,7 +91,8 @@
         margin-bottom: 2rem;
     }
 
-    .myWorkText > p {
+    .myWorkText > p,
+    .githubProjectCards > p {
         line-height: 2.25rem;
         font-weight: 300;
         margin-bottom: 0;
@@ -103,19 +109,50 @@
 
     .topRowProjectCards {
         display: flex;
+        flex-direction: column;
     }
 
     .topRowProjectCards,
-    .fullWidthProjectCards {
-        margin-top: 3rem;
-        margin-bottom: 1rem;
+    .fullWidthProjectCards,
+    .githubProjectCards {
+        margin-top: 1.5rem;
     }
 
-    .topRowProjectCards div:nth-of-type(1) {
-        margin-right: 1rem;
+    .githubProjectCards {
+        margin-bottom: 8rem;
     }
 
-    .topRowProjectCards div:nth-of-type(2) {
-        margin-left: 1rem;
+
+    @media only screen and (min-width: 768px) {
+        .container {
+            margin-top: 12rem;
+        }
+
+        .myWorkText {
+            max-width: 45%;
+        }
+
+        .topRowProjectCards {
+            flex-direction: row;
+        }
+
+        .topRowProjectCards,
+        .fullWidthProjectCards,
+        .githubProjectCards {
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .topRowProjectCards div:nth-of-type(1) {
+            margin-right: 1rem;
+        }
+
+        .topRowProjectCards div:nth-of-type(2) {
+            margin-left: 1rem;
+        }
+    }
+
+    @media only screen and (min-width: 1200px) {
+
     }
 </style>

@@ -3,7 +3,7 @@
         <transition name="fade" appear>
             <!-- wrapper element required for <transition> element to work properly -->
             <main class="layoutContainer">
-                <Navigation />
+                <Header />
                 <slot/>
             </main>
         </transition>
@@ -22,7 +22,7 @@
 <script>
     export default {
         components: {
-            Navigation: () => import('~/components/Navigation'),
+            Header: () => import('~/components/Header'),
             Footer: () => import('~/components/Footer'),
         },
     }
@@ -42,7 +42,7 @@
     .layoutContainer {
         max-width: 90rem;
         margin: 0 auto;
-        padding: 0 4rem;
+        padding: 0 1.5rem;
     }
 
     .fade-enter-active,
@@ -55,5 +55,17 @@
     .fade-enter,
     .fade-leave-active {
         opacity: 0
+    }
+
+    @media only screen and (min-width: 768px) {
+        .layoutContainer {
+            padding: 0 2.5rem;
+        }
+    }
+
+    @media only screen and (min-width: 1200px) {
+        .layoutContainer {
+            padding: 0 4rem;
+        }
     }
 </style>
