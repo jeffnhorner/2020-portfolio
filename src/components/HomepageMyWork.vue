@@ -7,7 +7,7 @@
             <h2>Some of My Work</h2>
             <p>
                 I stay pretty active when it comes to extra-curricular projects. Whether that
-                means contributing to an open source project, working on my own passion
+                means contributing to an open source project, working on a passion
                 project, or building a website/web app for a freelance client.
             </p>
         </div>

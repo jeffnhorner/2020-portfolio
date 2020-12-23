@@ -35,8 +35,8 @@
                     [$style.introTextAnimate] : isAnimating,
                 },
             ]">
-                I’m a self-taugh Software Engineer and made the transition from my previous career to Tech in 2017. I’ve had the pleasure of working alongside some incredible engineers,
-                designers, business analysts, and product owners. I’m extremly passionate about  code
+                I’m a self-taught Software Engineer and made the transition from my previous career to tech in 2017. I’ve had the pleasure of working alongside some incredible engineers,
+                designers, business analysts, and product owners. I’m extremly passionate about code
                 standards, ECMAScript, and reactive Javascript frameworks (Vue.js is my jam).
             </p>
         </div>
