@@ -137,10 +137,13 @@
         }
 
         .topRowProjectCards,
-        .fullWidthProjectCards,
-        .githubProjectCards {
+        .fullWidthProjectCards {
             margin-top: 3rem;
             margin-bottom: 1rem;
+        }
+
+        .githubProjectCards {
+            margin-top: 3rem;
         }
 
         .topRowProjectCards div:nth-of-type(1) {
