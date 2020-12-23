@@ -38,7 +38,7 @@
         flex-direction: column;
         max-width: 90rem;
         margin: 0 auto;
-        padding: 10rem 4rem 8rem;
+        padding: 8rem 1.5rem 4rem;
         width: 100%;
     }
 
@@ -69,5 +69,18 @@
 
     .logo {
         margin-top: 5rem;
+    }
+
+
+    @media only screen and (min-width: 768px) {
+        .wrapper {
+            padding: 8rem 2.5rem;
+        }
+    }
+
+    @media only screen and (min-width: 1200px) {
+        .wrapper {
+            padding: 8rem 4rem;
+        }
     }
 </style>

@@ -8,7 +8,7 @@ export default [
             'takeSplitQuestions.png',
             'takeSplitUploads.png',
         ],
-        longDescription: 'Take Split was a scooter ride share company based out of Los Angeles, CA. They contracted me for a short period of time to build out a new online step-by-step process for new potential Take Split drivers. My work on this was solely from a frontend perspective since the backend architecture was never fully fleshed out due to the company unfortunately shutting down during the early months of the global pandemic.',
+        longDescription: 'Take Split was a scooter ride share company based out of Los Angeles, CA. They contracted me for a short period of time to build out a new online step-by-step process for new potential Take Split drivers. My work on this was solely from a frontend perspective since the backend architecture was never fully fleshed out due to the company unfortunately shutting down during the early months of the 2020 global pandemic.',
         highlights: [
             {
                 title: 'Type',
@@ -37,7 +37,7 @@ export default [
             }
         ],
         theNeed: 'Take Split was previously using an online platform to handle all new driver applications. It was a very unorganized admin and the monthly fee was not cheap. This was ultimately the motivation behind the new application flow since Take Split would own the frontend and backend code. As I mentioned above, the backend was never built out, however, in addition to the API layer, the plan was going to build a custom admin so Take Split employees could manage/review the submitted applications.',
-        theStack: "Take Split's CEO gave me full control over what tech stack I could to quickly and elegantly build out the frontend. The decision to use Vue (Gridsome to be more specific) was a no brainer since 1) I was passionate about Vue as a reactive Javascript framework, 2) I'm pretty proficient with Vue considering I've used it professionally for almost 2 years now, and 3) I could get the prototype up quickly to present to the CEO and his team. He also gave me freerange of the design and since I do have a bit of design under my belt, this was an exciting project to work on.",
+        theStack: "Take Split's CEO gave me full control over what tech stack I could to quickly and elegantly build out the frontend. The decision to use Vue (Gridsome to be more specific) was a no brainer since 1) I was passionate about Vue as a reactive Javascript framework, 2) I'm pretty proficient with Vue considering I've used it professionally for almost 2 years now, and 3) I could get the prototype up quickly to present to the CEO and his team. Also, since I needed to store the driver's license and resume uploads, I used Firebase since this was a super easy API to implement into the application. Lastly, I had freerange of the design and since I have a bit of design under my belt, this was an exciting project to work on.",
         problemsAndLessons: 'While having the freedom to design and build this application how I chose to, which was a great thing, under a pretty strong deadline it was also a challenge since at the end of the day the client just wanted a working prototype. If I would have been given designs, a user flow, and was told, "just build it", it would have taken a lot less time. However, it gave me an opportunity to push myself and build some UI friendly (imo) working software under a strict time limit.',
     },
     {
@@ -84,47 +84,6 @@ export default [
         theStack: "The CTO that I was in communication didn't have any preference on the frontend architecture or framework so because I'm proficient in Vue, I decided to use Gridsome. Likely not to your surprise, I used Stripe as the payment processing system which is such a simple and elegant way for companies to process payments. Lastly, Wheels wanted to track how users were engaging the application and because they had a decent amount of exposure to Mixpanel, this was the third party analytics software that I configured for them.",
         problemsAndLessons: "The most challenging part of this project was synergizing the frontend application with the backend server since the Wheels internal backend team built the GraphQL server and I, totally separate from them, built the client-facing application. When it came to putting it all together, there was a decent amount of re-write needed based upon how the data was being served to the frontend and the complex user states that were available after the payment was processed. The user state, or Wheels membership since this was a delivery service, had quite a few different possibilities. All in all, there was a lot of growth in this project and I thoroughly enjoyed getting me feet wet with some new tech.",
     },
-    // {
-    //     id: 'raw-creations',
-    //     homepageImage: 'rawCreations.png',
-    //     image: 'rawProjectBanner.png',
-    //     title: 'Raw Creations Juice',
-    //     description: 'A custom Shopify store that provids a custom checkout experience for an ideal user experience for both the client and Shopify backend.',
-    //     callToActionText: 'Read Story',
-    //     projectImages: [
-    //         'rawProduct.png',
-    //         'rawHighlight.png',
-    //     ],
-    //     longDescription: 'From the beginning days of when I first got into software development all the way to now, I’ve learned and gained a solid understand of web development standards: the importance of code standards, why reusability/scalability in large enterprise applications is so important, and how user expereince means everything.',
-    //     highlights: [
-    //         {
-    //             title: 'Type',
-    //             content: 'Freelance Project',
-    //         },
-    //         {
-    //             title: 'The Tech',
-    //             content: [
-    //                 'CSS',
-    //                 'Google Maps',
-    //                 'Javascript',
-    //                 'Liquid',
-    //                 'Shopify',
-    //             ],
-    //         },
-    //         {
-    //             title: 'Show Me The Code',
-    //             isPrivate: true,
-    //         },
-    //         {
-    //             title: 'View It',
-    //             isLink: true,
-    //             content: 'https://rawcreationsjuice.com',
-    //         },
-    //     ],
-    //     'theNeed': 'I stay pretty active when it comes to extra-curricular projects. Whether that means contributing to an open source project, working on my own passion project, or building a website/web app for a client who has hired me.',
-    //     'theStack': 'I stay pretty active when it comes to extra-curricular projects. Whether that means contributing to an open source project, working on my own passion project, or building a website/web app for a client who has hired me.',
-    //     problemsAndLessons: 'I stay pretty active when it comes to extra-curricular projects. Whether that means contributing to an open source project, working on my own passion project, or building a website/web app for a client who has hired me.',
-    // },
     {
         id: 'cpap',
         homepageImage: 'cpap.png',
@@ -168,7 +127,7 @@ export default [
             }
         ],
         theSpaDescription: "The Technology team decided it was time to take advantage of more modern web technologies including a Single Page Application with a Microservice (REST API) layer. This would give us a more performant application and let us keep the code base modular by separating client-side and server-side logic. At the same time, we also adopted Agile so we had to think of a creative solution in order to launch a Single Page Application before re-writing the entire system to the new SPA/Microservice architecture. So what was the plan? For the initial launch project, we only re-wrote the header and footer to use the new architecture and kept all of the legacy body content. This would let us work in sprints and overtime, slowly transition each chunk of logic from the legacy system to the new architecture. Not to get too deep into the magic but we essentially use the new API layer to inject the legacy body content into the SPA via a API request.<br /><br />I wish I could remember how many sprints it took us to complete this task but all I can remember is working long hours with the team. I believe it only took a month or two but when the time came, after three faile deployments, the new architecture was (and is) live at <a href=https://www.cpap.com>CPAP.com</a>. From then until Summer of 2020, we re-wrote a large majority of the application. However, now, we've been working on an entirely new application that has a beta launch in early 2021. I can't share too much about it but it's a massive re-write and architecture shift that will positively affect all systems at CPAP.com.",
-        notableWork: "It's been a heck of an experience working on some really big features with some incredibly talented Software Engineers. I've learned an insane amount from everyone but most importantly, my lead has made the largest impact on my skillset since joining the team. He's one of those guys that has an amazing work ethic and deeply understands the technologies we use.<br /><br /> Anywho, a couple of my notable contributions are: increased our SPA unit test coverage to ~70%, implemented Apple Pay to work within all of our systems that interact with cpap.com, wrote a large portion of the window history state logic on our new product listing pages, re-wrote the mobile header for the inital project launch, implemented bread financing within the new architecture, writing a ridiculously advance component (that I never want to see again lol) that gives the marketing team full control over our homepage banner, and implemented enhanced ecommerce analytics for Google Analytics.<br /><br />I worked on so much more than just this and there's a lot more I could talk about but I think I'll leave it here for now.",
+        notableWork: "It's been a heck of an experience working on some really big features with some incredibly talented Software Engineers. I've learned an insane amount from everyone but most importantly, my lead has made the largest impact on my skillset since joining the team. He's one of those guys that has an amazing work ethic and deeply understands the technologies we use.<br /><br /> Anywho, a couple of my notable contributions are: increased our SPA unit test coverage to ~70%, implemented Apple Pay to work within all of our systems that interact with cpap.com, wrote a large portion of the window history state logic on our new product listing pages, re-wrote the CSR instant product search logic for the new architecture, re-wrote the mobile header for the inital project launch, implemented bread financing within the new architecture, writing a ridiculously advance component (that I never want to see again lol) that gives the marketing team full control over our homepage banner, and implemented enhanced ecommerce analytics for Google Analytics.<br /><br />I worked on so much more than just this and there's a lot more I could talk about but I think I'll leave it here for now.",
         problemsAndLessons: "Burn out is real. During and after the inital SPA launched, the entire Software team was cranking out so much work from re-writes to bugs that went well over the mandatory 40 hour work week. Being a self-taught Developer, and I don't know why I thought this, but I really believe 'burn out' was a real thing since my juices were always pumping with passion (not that non self-taught Devs don't feel this way). Boy was I wrong. However, once management noticed this, we scaled approrpiate and create more realistic expectations which was a great lesson learned.",
     },
 ]

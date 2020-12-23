@@ -30,7 +30,7 @@
 
 <style module>
     .header {
-        margin-top: 8rem;
+        margin-top: 4rem;
     }
 
     .bottomHeaderWrapper {
@@ -47,5 +47,11 @@
         max-width: 20rem;
         margin-right: 0;
         width: 100%;
+    }
+
+    @media only screen and (min-width: 768px) {
+        .header {
+            margin-top: 8rem;
+        }
     }
 </style>

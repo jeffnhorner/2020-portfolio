@@ -52,12 +52,12 @@
 
 <style module>
     .title {
-        font-size: 2.75rem;
+        font-size: 1.5rem;
         margin: 5rem 0 2rem;
     }
 
     .subTitle {
-        font-size: 2.25rem;
+        font-size: 1.25rem;
         margin: 8rem 0 2rem;
     }
 
@@ -65,16 +65,35 @@
         line-height: 2.25rem;
         font-weight: 300;
         margin: 0;
-        max-width: 75%;
         width: 100%;
     }
 
     .lessons {
-        text-align: center;
-        margin-bottom: 8rem;
+        margin-bottom: 5rem;
     }
 
     .lessons .description {
         margin: 0 auto;
+    }
+
+    @media only screen and (min-width: 768px) {
+        .title {
+            font-size: 2.75rem;
+        }
+
+        .subTitle {
+            font-size: 2.25rem;
+        }
+
+        .lessons {
+            text-align: center;
+            margin-top: 8rem;
+        }
+    }
+
+    @media only screen and (min-width: 1200px) {
+        .description {
+            max-width: 75%;
+        }
     }
 </style>
