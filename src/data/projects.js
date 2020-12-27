@@ -109,7 +109,7 @@ export default [
                     'Jest',
                     'Kentico (headless CMS)',
                     'Laravel',
-                    'Mageno (headless PMS)',
+                    'Magento (headless PMS)',
                     'Nuxt',
                     'PHP',
                     'Twig',
