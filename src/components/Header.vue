@@ -1,6 +1,12 @@
 <template>
     <header v-bind:class="$style.header">
-        <Logo />
+        <div v-bind:class='$style.topHeaderWrapper'>
+            <Logo />
+            <SocialMediaIcons
+                v-if="!isHomepage"
+                v-bind:alignment="'right'"
+            />
+        </div>
         <div
             v-if="isHomepage"
             v-bind:class="$style.bottomHeaderWrapper"
@@ -33,9 +39,18 @@
         margin-top: 4rem;
     }
 
+    .topHeaderWrapper,
+    .bottomHeaderWrapper {
+        display: flex;
+    }
+
+    .topHeaderWrapper {
+        justify-content: space-between;
+        width: 100%;
+    }
+
     .bottomHeaderWrapper {
         align-items: center;
-        display: flex;
         margin-top: 6rem;
         justify-content: space-between;
     }

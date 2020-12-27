@@ -94,7 +94,7 @@
 
     .mastheadTextWrapper {
         font-weight: 300;
-        font-size: 2.25rem;
+        font-size: 2rem;
         line-height: 130%;
         margin: 2.5rem 0;
     }

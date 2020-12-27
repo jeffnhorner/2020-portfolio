@@ -32,7 +32,7 @@
         </div>
         <h3 v-bind:class="$style.header">Coming Soon</h3>
         <div v-bind:class="$style.githubProjectCards">
-            <p>Github highlights and my Shopify App.</p>
+            <p>Github highlights and a Shopify App I'm building.</p>
         </div>
     </div>
 </template>

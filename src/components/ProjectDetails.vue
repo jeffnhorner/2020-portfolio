@@ -1,9 +1,20 @@
 <template>
     <div v-bind:class="$style.container">
-        <template v-if="projectDetails.theSpaDescription">
-            <h2 v-bind:class="$style.title">The SPA Era</h2>
-            <p v-bind:class="$style.description" v-html="projectDetails.theSpaDescription" />
-            <h2 v-bind:class="[$style.title, $style.techTitle]">My Notable Contributions</h2>
+            <h2 v-bind:class="$style.title">{{ isFullTimeProject ? 'The SPA Era' : 'The Need' }}</h2>
+            <p
+                v-if="isFullTimeProject"
+                v-bind:class="$style.description"
+                v-html="projectDetails.theSpaDescription"
+            />
+            <p
+                v-else-if="!isFullTimeProject"
+                v-bind:class="$style.description"
+            >
+                {{ projectDetails.theNeed }}
+            </p>
+            <h2 v-bind:class="[$style.title, $style.techTitle]">
+                {{ isFullTimeProject ? 'My Notable Contributions' : 'Choosing the Tech Stack' }}
+            </h2>
             <div v-bind:class="$style.techStackWrapper">
                 <div v-bind:class="$style.techStackChips">
                     <template
@@ -19,13 +30,28 @@
                         </VChip>
                     </template>
                 </div>
-                <div v-bind:class="$style.notableWorkContainer">
-                    <p v-bind:class="$style.description" v-html="projectDetails.notableWork" />
+                <div v-bind:class="[
+                        {
+                            [$style.notableWorkContainer] : isFullTimeProject,
+                            [$style.techStackTextContainer] : !isFullTimeProject,
+                        }
+                    ]"
+                >
+                    <p
+                        v-if="isFullTimeProject"
+                        v-bind:class="$style.description"
+                        v-html="projectDetails.notableWork"
+                    />
+                    <p
+                        v-else
+                        v-bind:class="$style.description"
+                    >
+                        {{ projectDetails.theStack }}
+                    </p>
                 </div>
             </div>
-        </template>
-        <template v-else>
-            <h2 v-bind:class="$style.title">The Need</h2>
+        <!-- <template v-else> -->
+            <!-- <h2 v-bind:class="$style.title">The Need</h2>
             <p v-bind:class="$style.description">{{ projectDetails.theNeed }}</p>
             <h2 v-bind:class="[$style.title, $style.techTitle]">Choosing the Tech Stack</h2>
             <div v-bind:class="$style.techStackWrapper">
@@ -42,12 +68,12 @@
                             {{ skill }}
                         </VChip>
                     </template>
-                </div>
-                <div v-bind:class="$style.techStackTextContainer">
+                </div> -->
+                <!-- <div v-bind:class="$style.techStackTextContainer">
                     <p v-bind:class="$style.description">{{ projectDetails.theStack }}</p>
-                </div>
-            </div>
-        </template>
+                </div> -->
+            <!-- </div> -->
+        <!-- </template> -->
         <div v-bind:class="$style.imageContainer">
             <template v-for="image in projectDetails.projectImages">
                 <g-image
@@ -72,6 +98,10 @@
             techStackItems () {
                 return this.projectDetails.highlights.find(({ title }) => title.includes('Tech'))?.content;
             },
+
+            isFullTimeProject () {
+                return Boolean(this.projectDetails.theSpaDescription);
+            }
         }
     }
 </script>
@@ -158,6 +188,7 @@
             max-width: 40%;
             margin-top: 0;
             margin-left: 0;
+            margin-right: 1.5rem;
         }
 
         .techStackTextContainer,

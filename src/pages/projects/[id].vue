@@ -79,7 +79,7 @@
     }
 
     .lessons {
-        margin-bottom: 5rem;
+        margin-bottom: 8rem;
     }
 
     .lessons .description {
