@@ -1,5 +1,13 @@
 <template>
-    <div v-bind:class="$style.container">
+    <div v-bind:class="[
+        $style.container,
+        {
+            [$style.rightAlignment] : alignment === 'right',
+        },
+        {
+            [$style.centerAlignment] : alignment === 'center',
+        },
+    ]">
         <template
             v-for="(icon, index) in socialMediaIcons"
         >
@@ -24,6 +32,14 @@
     export default {
         components: {
             AppIcon: () => import('~/components/AppIcon'),
+        },
+
+        props: {
+            alignment: {
+                type: String,
+                // By default the icons will be left aligned
+                default: 'left',
+            },
         },
 
         data: () => ({
@@ -71,18 +87,30 @@
         max-width: 30rem;
     }
 
-    .socialMediaIconLink {
-        margin-right: 1.25rem;
+    .socialMediaIconLink:not(:last-of-type) {
+        margin-right: 1rem;
         position: relative;
     }
 
     .socialMediaIcon {
-        font-size: 1.5rem;
+        font-size: 1.25rem;
+    }
+
+    .rightAlignment {
+        justify-content: flex-end;
+    }
+
+    .centerAlignment {
+        justify-content: center;
     }
 
     @media only screen and (min-width: 768px) {
-        .socialMediaIconLink {
+        .socialMediaIconLink:not(:last-of-type) {
             margin-right: 1.75rem;
+        }
+
+        .socialMediaIcon {
+            font-size: 1.5rem;
         }
     }
 </style>

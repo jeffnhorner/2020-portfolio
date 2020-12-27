@@ -15,7 +15,10 @@
             >
                 jeffnhorner@outlook.com
             </a>
-            <Logo v-bind:class="$style.logo" />
+            <div v-bind:class="$style.bottomContainer">
+                <Logo v-bind:class="$style.logo" />
+                <SocialMediaIcons alignment="right" />
+            </div>
         </div>
     </div>
 </template>
@@ -24,6 +27,7 @@
     export default {
         components: {
             Logo: () => import('~/components/Logo'),
+            SocialMediaIcons: () => import('~/components/SocialMediaIcons'),
         },
     }
 </script>
@@ -46,8 +50,14 @@
         margin-bottom: 5rem;
     }
 
+    .bottomContainer {
+        align-items: flex-end;
+        display: flex;
+        justify-content: space-between;
+    }
+
     .title {
-        font-size: 2.25rem;
+        font-size: 1.5rem;
         font-weight: 700;
         margin-bottom: 2rem;
     }
@@ -75,6 +85,10 @@
     @media only screen and (min-width: 768px) {
         .wrapper {
             padding: 8rem 2.5rem;
+        }
+
+        .title {
+            font-size: 2.25rem;
         }
     }
 

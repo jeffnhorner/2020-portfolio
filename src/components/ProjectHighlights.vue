@@ -132,6 +132,7 @@
     }
 
     .showMoreText {
+        cursor: pointer;
         text-decoration: underline;
     }
 
