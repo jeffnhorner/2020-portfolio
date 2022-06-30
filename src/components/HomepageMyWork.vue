@@ -53,9 +53,13 @@
                 />
             </template>
         </div>
+        <h3 v-bind:class="$style.header">Github Activity</h3>
+        <div v-bind:class="$style.externalProjectCards">
+            <GitHubCalendar />
+        </div>
         <h3 v-bind:class="$style.header">Coming Soon</h3>
-        <div v-bind:class="$style.githubProjectCards">
-            <p>Github highlights and a Shopify App I'm building.</p>
+        <div v-bind:class="$style.externalProjectCards">
+            <p>Details on the Shopify App I'm building.</p>
         </div>
     </div>
 </template>
@@ -64,6 +68,7 @@
     export default {
         components: {
             ProjectCard: () => import('~/components/ProjectCard'),
+            GitHubCalendar: () => import('~/components/GitHubCalendar')
         },
 
         data: () => ({
@@ -104,7 +109,7 @@
     }
 
     .myWorkText,
-    .githubProjectCards > p {
+    .externalProjectCards > p {
         width: 100%;
     }
 
@@ -119,7 +124,7 @@
     }
 
     .myWorkText > p,
-    .githubProjectCards > p {
+    .externalProjectCards > p {
         line-height: 2.25rem;
         font-weight: 300;
         margin-bottom: 0;
@@ -137,11 +142,11 @@
 
     .topRowProjectCards,
     .fullWidthProjectCards,
-    .githubProjectCards {
+    .externalProjectCards {
         margin-top: 1.5rem;
     }
 
-    .githubProjectCards {
+    .externalProjectCards {
         margin-bottom: 8rem;
     }
 
@@ -165,7 +170,7 @@
             margin-bottom: 1rem;
         }
 
-        .githubProjectCards {
+        .externalProjectCards {
             margin-top: 3rem;
         }
 
