@@ -17,7 +17,7 @@
                 },
             ]">
                 <span>Yo, I'm Jeff.</span>
-                <span v-bind:class="[$style.highlightText, $style.primaryBlack]">Software Engineer</span>
+                <span v-bind:class="[$style.highlightText, $style.primaryBlack]">Sr. Software Engineer</span>
                 <span v-bind:class="$style.coffeeText">and coffee lover.</span>
             </h1>
             <p v-bind:class="[
@@ -27,7 +27,7 @@
                 },
             ]">
                 <span v-bind:class="[$style.primaryBlack, $style.shortDescription]">TL;DR</span>
-                &nbsp;I love Jesus, my wife, coding, coffee, fitness, and all things Harry Potter.
+                &nbsp;I love Jesus, my family, coding, coffee, fitness, and all things Harry Potter.
             </p>
             <p v-bind:class="[
                 $style.introText,
@@ -61,6 +61,8 @@
         flex-direction: column;
         justify-content: space-between;
         margin-top: 2.5rem;
+        height: 100%;
+        overflow: hidden;
     }
 
     .homepageMastheadImage {
@@ -146,6 +148,7 @@
         .container {
             flex-direction: row;
             margin-top: 6rem;
+            max-height: 44rem;
         }
 
         .homepageMastheadImage {

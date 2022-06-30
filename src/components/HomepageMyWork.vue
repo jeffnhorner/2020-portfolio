@@ -11,7 +11,29 @@
                 project, or building a website/web app for a freelance client.
             </p>
         </div>
-        <h3 v-bind:class="[$style.header, $style.recentWork]">Most Recent Client Work</h3>
+        <h3 v-bind:class="$style.header">Full Time Work</h3>
+        <div v-bind:class="$style.fullWidthProjectCards">
+            <template v-for="project in determineProjectCardsToDisplay(4)">
+                <ProjectCard
+                    v-bind:key="project.title"
+                    v-bind:project="project"
+                    v-bind:image="isTabletOrMobile ? project.bannerImage : project.homepageImage"
+                    isFullWidth
+                />
+            </template>
+        </div>
+        <h3 v-bind:class="$style.header">Volunteer Work</h3>
+        <div v-bind:class="$style.fullWidthProjectCards">
+            <template v-for="project in determineProjectCardsToDisplay(3, 4)">
+                <ProjectCard
+                    v-bind:key="project.title"
+                    v-bind:project="project"
+                    v-bind:image="isTabletOrMobile ? project.bannerImage : project.homepageImage"
+                    isFullWidth
+                />
+            </template>
+        </div>
+        <h3 v-bind:class="$style.header">Most Recent Contract Work</h3>
         <div v-bind:class="$style.topRowProjectCards">
             <template v-for="project in determineProjectCardsToDisplay(0, 2)">
                 <ProjectCard
@@ -20,13 +42,14 @@
                 />
             </template>
         </div>
-        <h3 v-bind:class="$style.header">Full Time Work</h3>
+        <h3 v-bind:class="$style.header">Previous Full Time Work</h3>
         <div v-bind:class="$style.fullWidthProjectCards">
-            <template v-for="project in determineProjectCardsToDisplay(2)">
+            <template v-for="project in determineProjectCardsToDisplay(2, 3)">
                 <ProjectCard
                     v-bind:key="project.title"
                     v-bind:project="project"
                     v-bind:image="isTabletOrMobile ? project.bannerImage : project.homepageImage"
+                    isFullWidth
                 />
             </template>
         </div>
@@ -85,6 +108,10 @@
         width: 100%;
     }
 
+    .myWorkText {
+        margin-bottom: 5rem;
+    }
+
     .myWorkText > h2 {
         font-size: 2.5rem;
         font-weight: 500;
@@ -96,10 +123,6 @@
         line-height: 2.25rem;
         font-weight: 300;
         margin-bottom: 0;
-    }
-
-    .recentWork {
-        margin-top: 5rem;
     }
 
     .header {
@@ -138,7 +161,7 @@
 
         .topRowProjectCards,
         .fullWidthProjectCards {
-            margin-top: 3rem;
+            margin-top: 1.5rem;
             margin-bottom: 1rem;
         }
 
