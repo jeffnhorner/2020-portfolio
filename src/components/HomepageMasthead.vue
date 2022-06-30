@@ -1,7 +1,7 @@
 <template>
     <div v-bind:class="$style.container">
         <g-image
-            src="~/../static/jeff2.jpg"
+            src="~/../static/homepage-masthead.jpg"
             v-bind:class="[
                 $style.homepageMastheadImage,
                 {
