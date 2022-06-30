@@ -1,5 +1,6 @@
 <template>
     <div
+        v-if="isReady"
         v-bind:class="[
             $style.container,
             {
@@ -74,7 +75,9 @@
 
         data: () => ({
             isHovering: false,
+            isReady: true,
             componentIsVisible: false,
+            isElementVisible: null,
         }),
 
         computed: {
@@ -83,6 +86,12 @@
                 // see https://github.com/gridsome/gridsome/issues/292#issuecomment-583692119
                 return require(`!!assets-loader!@images/${this.image || this.project.image}`);
             },
+        },
+
+        async created() {
+            const { isElementVisible } = await import('~/utilities/isElementVisible');
+            this.isElementVisible = isElementVisible;
+            this.isReady = true;
         },
 
         mounted () {
@@ -95,9 +104,7 @@
 
         methods: {
             async checkComponentVisibility () {
-                const { isElementVisible } = await import('~/utilities/isElementVisible');
-
-                this.componentIsVisible = isElementVisible(this.$el, 100, -100);
+                this.componentIsVisible = this.isElementVisible(this.$el, 100, -100);
             }
         }
     }

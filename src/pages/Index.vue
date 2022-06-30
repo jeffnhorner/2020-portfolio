@@ -91,15 +91,6 @@
         opacity: 1;
     }
 
-    .test {
-        background: #262626;
-        color: #e7e7e;
-        position: absolute;
-        width: 100%;
-        text-align: center;
-        margin: 0 auto;
-    }
-
     .stickyBanner {
         position: fixed;
         bottom: 0;

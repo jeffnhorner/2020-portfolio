@@ -53,9 +53,13 @@
                 />
             </template>
         </div>
+        <h3 v-bind:class="$style.header">Github Activity</h3>
+        <div v-bind:class="$style.githubProjectCards">
+            <GitHubCalendar />
+        </div>
         <h3 v-bind:class="$style.header">Coming Soon</h3>
         <div v-bind:class="$style.githubProjectCards">
-            <p>Github highlights and a Shopify App I'm building.</p>
+            <p>Details on the Shopify App I'm building.</p>
         </div>
     </div>
 </template>
@@ -64,6 +68,7 @@
     export default {
         components: {
             ProjectCard: () => import('~/components/ProjectCard'),
+            GitHubCalendar: () => import('~/components/GitHubCalendar')
         },
 
         data: () => ({
