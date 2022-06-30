@@ -69,6 +69,9 @@
     .gitHubContainer {
         opacity: 0;
         transition: opacity .5s ease-in-out;
+        width: 100%;
+        max-width: 60rem;
+        margin: 0 auto;
     }
 
     .gitHubContainerAnimation {
