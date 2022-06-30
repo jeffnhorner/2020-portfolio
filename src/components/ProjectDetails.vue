@@ -1,10 +1,10 @@
 <template>
     <div v-bind:class="$style.container">
-            <h2 v-bind:class="$style.title">{{ isFullTimeProject ? 'The SPA Era' : 'The Need' }}</h2>
+            <h2 v-bind:class="$style.title">{{ isFullTimeProject ? 'Details' : 'The Need' }}</h2>
             <p
                 v-if="isFullTimeProject"
                 v-bind:class="$style.description"
-                v-html="projectDetails.theSpaDescription"
+                v-html="projectDetails.mainDescription"
             />
             <p
                 v-else-if="!isFullTimeProject"
@@ -50,30 +50,6 @@
                     </p>
                 </div>
             </div>
-        <!-- <template v-else> -->
-            <!-- <h2 v-bind:class="$style.title">The Need</h2>
-            <p v-bind:class="$style.description">{{ projectDetails.theNeed }}</p>
-            <h2 v-bind:class="[$style.title, $style.techTitle]">Choosing the Tech Stack</h2>
-            <div v-bind:class="$style.techStackWrapper">
-                <div v-bind:class="$style.techStackChips">
-                    <template
-                        v-for="skill in techStackItems"
-                    >
-                        <VChip
-                            v-bind:key="skill"
-                            v-bind:class="$style.skill"
-                            label
-                            color="#f7f7f7"
-                        >
-                            {{ skill }}
-                        </VChip>
-                    </template>
-                </div> -->
-                <!-- <div v-bind:class="$style.techStackTextContainer">
-                    <p v-bind:class="$style.description">{{ projectDetails.theStack }}</p>
-                </div> -->
-            <!-- </div> -->
-        <!-- </template> -->
         <div v-bind:class="$style.imageContainer">
             <template v-for="image in projectDetails.projectImages">
                 <g-image
@@ -100,7 +76,7 @@
             },
 
             isFullTimeProject () {
-                return Boolean(this.projectDetails.theSpaDescription);
+                return Boolean(this.projectDetails.mainDescription);
             }
         }
     }

@@ -10,7 +10,15 @@
         v-on:mouseover="isHovering = true"
         v-on:mouseleave="isHovering = false"
     >
-        <g-link v-bind:to="'/projects/' + project.id">
+        <g-link
+            v-bind:to="'/projects/' + project.id"
+            v-bind:class="[
+                $style.imageWrapper,
+                {
+                    [$style.fullWidthImage] : isFullWidth,
+                },
+            ]"
+        >
             <g-image
                 v-bind:class="[
                     $style.image,
@@ -58,6 +66,10 @@
                 type: String,
                 default: '',
             },
+            isFullWidth: {
+                type: Boolean,
+                default: false,
+            },
         },
 
         data: () => ({
@@ -103,8 +115,18 @@
         opacity: 1;
     }
 
-    .image {
+    .fullWidthImage {
+        display: block;
+        overflow: hidden;
+        height: 100%;
+        max-height: 33rem;
+    }
+
+    .imageWrapper {
         border: .025rem solid #eee;
+    }
+
+    .image {
         border-radius: 5px;
         display: block;
         max-width: 100%;

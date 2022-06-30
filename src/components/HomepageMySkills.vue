@@ -36,6 +36,8 @@
                 'Nuxt',
                 'Gridsome',
                 'React',
+                'Next',
+                'Typescript',
                 'Apollo',
                 'GraphQL',
                 'Git',
@@ -49,13 +51,18 @@
                 'Node',
                 'PHP',
                 'SQL',
-                'mySql',
+                'CI/CD',
+                'Azure',
+                'MySQL',
                 'Laravel',
                 'Magento',
                 'Jest',
                 'UI Design',
                 'User Experience',
                 'Webpack',
+                'Linters',
+                'Socket.io',
+                'Husky',
                 'Google Analytics',
                 'Enhanced Ecommerce GA',
                 'Google Tag Manager',
@@ -66,7 +73,7 @@
 
 <style module>
     .container {
-        align-items: flex-end;
+        align-items: center;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
