@@ -133,8 +133,8 @@ export default [
         description: "I joined the Renée team in March of 2021 after connecting with a now great friend of mine about a Kingdom vision he and a small team were building. I've had the pleasure of working alongside enterprise level engineers to build software that we believe is leveraging technology for the Kingdom. My first task was to introduce a reactive javascript layer to the UI...",
         callToActionText: 'Read My Experience',
         projectImages: [
-            'cpapPlp.png',
-            'cpapCheckout.png',
+            'reneeHighlightOne.png',
+            'reneeHighlightTwo.png',
         ],
         longDescription: "I joined the Renée team in March of 2021 after connecting with a now great friend of mine about a Kingdom vision he and a small team were building. I've had the pleasure of working alongside enterprise level engineers to build software that we believe is leveraging technology for the Kingdom. My first task was to introduce a reactive javascript layer to the UI that would play nice with the Go templates that powered all of the views. There are quite a few layers to Renée beweteen microservices and a admin console that user's interact with. The majority of my time is spent optimizing and enahcing the admin for users. Let's dive into how Vue is playing nice with Go...",
         highlights: [
