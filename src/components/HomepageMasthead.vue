@@ -27,7 +27,7 @@
                 },
             ]">
                 <span v-bind:class="[$style.primaryBlack, $style.shortDescription]">TL;DR</span>
-                &nbsp;I love Jesus, my family, coding, coffee, fitness, and all things Harry Potter.
+                &nbsp;I love Jesus, my family, coding, coffee, fitness, traveling, and all things Harry Potter.
             </p>
             <p v-bind:class="[
                 $style.introText,
@@ -36,7 +36,7 @@
                 },
             ]">
                 I’m a self-taught Software Engineer and made the transition from my previous career to tech in 2017. I’ve had the pleasure of working alongside some incredible engineers,
-                designers, business analysts, and product owners. I’m extremly passionate about code
+                designers, business analysts, and product owners. I’m passionate about code
                 standards, ECMAScript, and reactive Javascript frameworks (Vue.js is my jam).
             </p>
         </div>
