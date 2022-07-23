@@ -27,7 +27,7 @@
                 },
             ]">
                 <span v-bind:class="[$style.primaryBlack, $style.shortDescription]">TL;DR</span>
-                &nbsp;I love Jesus, my family, coding, coffee, fitness, traveling, and all things Harry Potter.
+                &nbsp;I love Jesus, my family, coding, coffee, fitness, and all things Harry Potter.
             </p>
             <p v-bind:class="[
                 $style.introText,
