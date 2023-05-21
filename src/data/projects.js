@@ -212,7 +212,7 @@ export default [
         homepageImage: 'tkww.png',
         image: 'tkwwBanner.png',
         title: 'The Knot Worldwide',
-        description: "I joined The Knot Worldwid (tkww) in July 2022 as a Lead Software Engineer for one of the engineering squads in the Registry Zone. Registry entails all things related to couples creating wedding wishlist (registry) as they plan their big day. It's been a thrill working at a company with such a strong cultue of leveraging exciting new technology, no ego (truly), and moving the needle forward anyway we can to serve couples. I've been blessed to be able to work with some of the most talendted engineers, product team, designers, and data folks. Coming from a start up, I've also been re-introduced to the importance of data-driven decisions.",
+        description: "I joined The Knot Worldwide (tkww) in July 2022 as a Lead Software Engineer for one of the engineering squads in the Registry Zone. Registry entails all things related to couples creating their wedding wishlist (registry) as they plan their big day. It's been a joy working at a company with such a strong cultue of leveraging exciting new technology, no ego (truly), and moving the needle forward anyway we can to serve couples. I've been blessed to be able to work with some of the most talented engineers, product team, designers, and data folks. Coming from a start up, I've also been re-introduced to the importance of data-driven decisions.",
         callToActionText: 'Full Details Coming Soon',
         hideDetailPage: true,
     },
