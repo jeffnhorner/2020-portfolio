@@ -80,17 +80,60 @@ export default [
         problemsAndLessons: "The most challenging part of this project was synergizing the frontend application with the backend server since the Wheels internal backend team built the GraphQL server. When it came to putting it all together, there was a decent amount of re-write needed based upon how the data was being served to the frontend and the complex user states that were available after the payment was processed. The user state (Wheel's membership plans), had quite a few different possibilities. All in all, there was a lot of growth in this project and I thoroughly enjoyed getting my feet wet with some new tech.",
     },
     {
+        id: 'em',
+        homepageImage: 'em.png',
+        image: 'em.png',
+        title: 'evaluate.market',
+        description: "I was with evaluate market from May 2021 - June 2022 and it was exciting and interesting, to say the least. When I joined, I dove  head first into the web3 space having no prior knowledge of it. When I first joined, the original version of the web application was live and user's found it be very useful. A few months after I started, we decided to hired a design agency...",
+        callToActionText: 'Read My Experience',
+        projectImages: [
+            'emCollection.png',
+            'emPortfolio.png',
+        ],
+         longDescription: "I was with evaluate market from May 2021 - June 2022 and it was exciting and interesting, to say the least. When I joined, I dove  head first into the web3 space having no prior knowledge of it. When I first joined, the original version of the web application was live and user's found it be very useful. A few months after I started, we decided to hired a design agency to totally revamp the website. This led to architectural discussions on how to make both client and server side logic as reusable as possible since the first iteration was thrown together pretty quickly having a decent amount of technical debt. One of my most proud accomplishments since working at em, was introducing the idea (and implementation) of an internal UI component framework for expedited UI development and reusability. Let's walk through that...",
+        highlights: [
+            {
+                title: 'Type',
+                content: 'Full Time',
+            },
+            {
+                title: "All the Tech I've Worked With",
+                content: [
+                    'React',
+                    'Typescript',
+                    'Next',
+                    'node.js',
+                    'express',
+                    'apex-charts',
+                    'Headless UI',
+                    'Tailwind CSS',
+                    'GraphQL',
+                    'Webpack',
+                    'Socket.io',
+                ],
+            },
+            {
+                title: 'View It',
+                isLink: true,
+                content: 'https://evaluate.market',
+            }
+        ],
+        mainDescription: "The design agency was completely rebranding em between a new site design, styleguide, logo, and color refesh. The styleguide gave us a framework to know what each state of each component needed to look like. With the existing filesystem structure, there wasn't much opportunity for reusability. It would require the majority of the React components to be re-written. This is where Headless UI comes in.<br /><br /> Headless UI is an unbiased UI library that comes with functional and accesible components ootb while giving engineers full control over the design and states. Since accesiblity is (and should be) an important KPI for web standards, especially trying to perform well in Google's performance metrics, this was and ideal library to use. Given that we were using Materail UI as our UI component library, I proposed Headless UI to mirror the styles of Material UI using Tailwind CSS so we can build an framework of interal components to reuse across the application.",
+        notableWork: "Along with the interal components built with Headless UI, I extended the framework to have additional reusable components that were built on Materail UI given Headless UI is a bit limited in terms of the scope of the API. <br /><br />I also implemented a simple lazy loading architecture for any imported file to be dynamically imported. An example could be a lazy loaded component or a helper that is asynchronously imported if it's only used when a function is invoked. This simple architecture reduced the overall production bundle size by ~36%.<br /><br />I was also tasked to implement an enhanced analytics sytem to identify how user's were interacting with our site. These are just a few things I've worked on since joining the team.",
+        problemsAndLessons: "Unnecessary React re-renders are costly when it comes to writing a performant web application. After implementing the lazy loading architecture, I noticed awful flickering whenever a route would change or an initial page load. This was caused by not adding additional React.Suspense fallbacks deeper down the component tree where files were being lazy/dyamically loaded. It didn't take long to implment a fix but it was sure a learning leasson when shipping a product to a large user base.",
+    },
+    {
         id: 'cpap',
         homepageImage: 'cpap.png',
         image: 'cpapBanner.png',
         title: 'CPAP.com',
-        description: 'I started working at CPAP.com in the Fall of 2018 and man was it an exciting journey. When I first started, the e-commerce application was a ~15 year old frankenstein legacy system that desparately needed some updating. After I started, we built a new web application using modern technologies in a rather unqiue way...',
+        description: 'My time at CPAP.com was from November 2018 - May 2021 and man was it an exciting journey. When I first started, the e-commerce application was a ~15 year old frankenstein legacy system that desparately needed some updating. After I started, we built a new web application using modern technologies in a rather unqiue way...',
         callToActionText: 'Read My Experience',
         projectImages: [
             'cpapPlp.png',
             'cpapCheckout.png',
         ],
-        longDescription: "This was my full-time gig since Fall of 2018 and man was it an exciting journey. When I first started, the e-commerce application was a ~15 year old frankenstein legacy system that desparately needed some updating. After I started, we built a new web application using modern technologies in a rather unqiue way. CPAP.com has been in business for close to 20 years. When I first came on, the e-commerce-application we worked on was a monolithic application that housed both the frontend and the backend. This legacy system was tied to other homebrewed systems such as a Product Management System (PMS), Content Management System (CMS), Warehouse Management System (WMS), and a few others. It was fragile and all of the systems were very dependent on each other, especially the client-facing application. About one month after I started, that's when all the fun began...",
+        longDescription: "TMy time at CPAP.com was from November 2018 - May 2021 and man was it an exciting journey. When I first started, the e-commerce application was a ~15 year old frankenstein legacy system that desparately needed some updating. After I started, we built a new web application using modern technologies in a rather unqiue way. CPAP.com has been in business for close to 20 years. When I first came on, the e-commerce-application we worked on was a monolithic application that housed both the frontend and the backend. This legacy system was tied to other homebrewed systems such as a Product Management System (PMS), Content Management System (CMS), Warehouse Management System (WMS), and a few others. It was fragile and all of the systems were very dependent on each other, especially the client-facing application. About one month after I started, that's when all the fun began...",
         highlights: [
             {
                 title: 'Type',
@@ -165,46 +208,12 @@ export default [
         problemsAndLessons: "JQuery and Vue don't work well together. After introducing Vue to the frontend, there were a handful of areas that were no longer functional because of a conflict between JQuery's $(document).ready() function and Vue's created lifecycle hook. These conflicts were resolved fairly quickly after realzing I could instantiate any JQuery code within Vue's $nextTick() helper inside Vue's 'mounted' lifecycle hook ",
     },
     {
-        id: 'em',
-        homepageImage: 'em.png',
-        image: 'em.png',
-        title: 'evaluate.market',
-        description: "This has been my full-time gig since May of 2021 and it's been exciting and interesting, to say the least, diving head first into the web3 space having no prior knowledge of it. When I first joined, the original version of the web application was live and user's found it be very useful. A few months after I started, we decided to hired a design agency...",
-        callToActionText: 'Read My Experience',
-        projectImages: [
-            'emCollection.png',
-            'emPortfolio.png',
-        ],
-         longDescription: "This has been my full-time gig since May of 2021 and it's been exciting and interesting, to say the least, diving head first into the web3 space having no prior knowledge of it. When I first joined, the original version of the web application was live and user's found it be very useful. A few months after I started, we decided to hired a design agency to totally revamp the website. This led to architectural discussions on how to make both client and server side logic as reusable as possible since the first iteration was thrown together pretty quickly having a decent amount of technical debt. One of my most proud accomplishments since working at em, was introducing the idea (and implementation) of an internal UI component framework for expedited UI development and reusability. Let's walk through that...",
-        highlights: [
-            {
-                title: 'Type',
-                content: 'Full Time',
-            },
-            {
-                title: "All the Tech I've Worked With",
-                content: [
-                    'React',
-                    'Typescript',
-                    'Next',
-                    'node.js',
-                    'express',
-                    'apex-charts',
-                    'Headless UI',
-                    'Tailwind CSS',
-                    'GraphQL',
-                    'Webpack',
-                    'Socket.io',
-                ],
-            },
-            {
-                title: 'View It',
-                isLink: true,
-                content: 'https://evaluate.market',
-            }
-        ],
-        mainDescription: "The design agency was completely rebranding em between a new site design, styleguide, logo, and color refesh. The styleguide gave us a framework to know what each state of each component needed to look like. With the existing filesystem structure, there wasn't much opportunity for reusability. It would require the majority of the React components to be re-written. This is where Headless UI comes in.<br /><br /> Headless UI is an unbiased UI library that comes with functional and accesible components ootb while giving engineers full control over the design and states. Since accesiblity is (and should be) an important KPI for web standards, especially trying to perform well in Google's performance metrics, this was and ideal library to use. Given that we were using Materail UI as our UI component library, I proposed Headless UI to mirror the styles of Material UI using Tailwind CSS so we can build an framework of interal components to reuse across the application.",
-        notableWork: "Along with the interal components built with Headless UI, I extended the framework to have additional reusable components that were built on Materail UI given Headless UI is a bit limited in terms of the scope of the API. <br /><br />I also implemented a simple lazy loading architecture for any imported file to be dynamically imported. An example could be a lazy loaded component or a helper that is asynchronously imported if it's only used when a function is invoked. This simple architecture reduced the overall production bundle size by ~36%.<br /><br />I was also tasked to implement an enhanced analytics sytem to identify how user's were interacting with our site. These are just a few things I've worked on since joining the team.",
-        problemsAndLessons: "Unnecessary React re-renders are costly when it comes to writing a performant web application. After implementing the lazy loading architecture, I noticed awful flickering whenever a route would change or an initial page load. This was caused by not adding additional React.Suspense fallbacks deeper down the component tree where files were being lazy/dyamically loaded. It didn't take long to implment a fix but it was sure a learning leasson when shipping a product to a large user base.",
+        id: 'tkww',
+        homepageImage: 'tkww.png',
+        image: 'tkwwBanner.png',
+        title: 'The Knot Worldwide',
+        description: "I joined The Knot Worldwid (tkww) in July 2022 as a Lead Software Engineer for one of the engineering squads in the Registry Zone. Registry entails all things related to couples creating wedding wishlist (registry) as they plan their big day. It's been a thrill working at a company with such a strong cultue of leveraging exciting new technology, no ego (truly), and moving the needle forward anyway we can to serve couples. I've been blessed to be able to work with some of the most talendted engineers, product team, designers, and data folks. Coming from a start up, I've also been re-introduced to the importance of data-driven decisions.",
+        callToActionText: 'Full Details Coming Soon',
+        hideDetailPage: true,
     },
 ]

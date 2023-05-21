@@ -12,7 +12,7 @@
         v-on:mouseleave="isHovering = false"
     >
         <g-link
-            v-bind:to="'/projects/' + project.id"
+            v-bind:to="!project.hideDetailPage ? '/projects/' + project.id : ''"
             v-bind:class="[
                 $style.imageWrapper,
                 {
@@ -33,7 +33,7 @@
         <p v-bind:class="$style.title">{{ project.title }}</p>
         <p v-bind:class="$style.description">{{ project.description }}</p>
         <VBtn
-            v-bind:to="'/projects/' + project.id"
+            v-bind:to="!project.hideDetailPage ? '/projects/' + project.id : ''"
             color="#f5f5f5"
             depressed
         >

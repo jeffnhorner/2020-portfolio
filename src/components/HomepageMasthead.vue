@@ -17,7 +17,7 @@
                 },
             ]">
                 <span>Yo, I'm Jeff.</span>
-                <span v-bind:class="[$style.highlightText, $style.primaryBlack]">Sr. Software Engineer</span>
+                <span v-bind:class="[$style.highlightText, $style.primaryBlack]">Lead Software Engineer</span>
                 <span v-bind:class="$style.coffeeText">and coffee lover.</span>
             </h1>
             <p v-bind:class="[
@@ -37,7 +37,7 @@
             ]">
                 I’m a self-taught Software Engineer and made the transition from my previous career to tech in 2017. I’ve had the pleasure of working alongside some incredible engineers,
                 designers, business analysts, and product owners. I’m passionate about code
-                standards, ECMAScript, and reactive Javascript frameworks (Vue.js is my jam).
+                standards, ECMAScript, strongly typed interfaces, and reactive Javascript frameworks (Vue & React are my jam).
             </p>
         </div>
     </div>

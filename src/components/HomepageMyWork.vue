@@ -13,45 +13,41 @@
         </div>
         <h3 v-bind:class="$style.header">Full Time Work</h3>
         <div v-bind:class="$style.fullWidthProjectCards">
-            <template v-for="project in determineProjectCardsToDisplay(4)">
+            <div v-for="project in determineProjectCardsToDisplay(projects.length - 1)" v-bind:key="project.title">
                 <ProjectCard
-                    v-bind:key="project.title"
                     v-bind:project="project"
                     v-bind:image="isTabletOrMobile ? project.bannerImage : project.homepageImage"
                     isFullWidth
                 />
-            </template>
+            </div>
         </div>
         <h3 v-bind:class="$style.header">Volunteer Work</h3>
         <div v-bind:class="$style.fullWidthProjectCards">
-            <template v-for="project in determineProjectCardsToDisplay(3, 4)">
+            <div v-for="project in determineProjectCardsToDisplay(4)" v-bind:key="project.title">
                 <ProjectCard
-                    v-bind:key="project.title"
                     v-bind:project="project"
                     v-bind:image="isTabletOrMobile ? project.bannerImage : project.homepageImage"
                     isFullWidth
                 />
-            </template>
+            </div>
         </div>
         <h3 v-bind:class="$style.header">Most Recent Contract Work</h3>
         <div v-bind:class="$style.topRowProjectCards">
-            <template v-for="project in determineProjectCardsToDisplay(0, 2)">
+            <div v-for="project in determineProjectCardsToDisplay(0, 2)" v-bind:key="project.title">
                 <ProjectCard
-                    v-bind:key="project.title"
                     v-bind:project="project"
                 />
-            </template>
+            </div>
         </div>
         <h3 v-bind:class="$style.header">Previous Full Time Work</h3>
         <div v-bind:class="$style.fullWidthProjectCards">
-            <template v-for="project in determineProjectCardsToDisplay(2, 3)">
+            <div v-for="project in determineProjectCardsToDisplay(2, 4)" v-bind:key="project.title">
                 <ProjectCard
-                    v-bind:key="project.title"
                     v-bind:project="project"
                     v-bind:image="isTabletOrMobile ? project.bannerImage : project.homepageImage"
                     isFullWidth
                 />
-            </template>
+            </div>
         </div>
         <h3 v-bind:class="$style.header">Github Activity</h3>
         <div v-bind:class="$style.externalProjectCards">
