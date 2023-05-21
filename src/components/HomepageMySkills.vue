@@ -10,18 +10,18 @@
             </p>
         </div>
         <div v-bind:class="$style.mySkillsItems">
-            <template
+            <span
                 v-for="skill in mySkills"
+                v-bind:key="skill"
             >
                 <VChip
-                    v-bind:key="skill"
                     v-bind:class="$style.skill"
                     label
                     color="#f7f7f7"
                 >
                     {{ skill }}
                 </VChip>
-            </template>
+            </span>
         </div>
     </div>
 </template>
@@ -49,14 +49,18 @@
                 'CSS Modules',
                 'Tailwinds',
                 'Node',
+                'Hapi',
                 'PHP',
                 'SQL',
-                'CI/CD',
-                'Azure',
+                'Postgres',
                 'MySQL',
                 'Laravel',
                 'Magento',
                 'Jest',
+                'CI/CD',
+                'Azure',
+                'Jenkins',
+                'Docker',
                 'UI Design',
                 'User Experience',
                 'Webpack',
